@@ -1,6 +1,7 @@
 # Gradual (In)Compatibility of Fairness Criteria
 
-This repository is the official implementation of the paper "Gradual (In)Compatibility of Fairness Criteria."
+This repository is the official implementation of the paper "Gradual (In)Compatibility of Fairness Criteria" by Corinna Hertweck and Tim Räz ([available on arXiv](https://arxiv.org/abs/2109.04399)).
+The paper explores the gradual (in)compatibility of the fairness metrics independence, separation and sufficiency.
 
 ## Requirements
 
@@ -25,6 +26,8 @@ We recommend setting up a [virtual environment](https://docs.python.org/3/librar
 ## Data
 
 The datasets can be found in the folder `/data` and are taken from [Friedler et al. (2019)](https://github.com/algofairness/fairness-comparison).
+
+`update_compas_csv.py` in the folder `/data` is used to preprocess the COMPAS data: It removes the columns that are the result of the one-hot encoding of the column `c_charge_desc` (which describes the charges raised against the defendant). This removal considerably speeds up training.
 
 ## Lambda selection
 
